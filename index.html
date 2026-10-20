@@ -3,315 +3,196 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Abilitas Consulting</title>
+<title>Dr. Sylvia Ramirez | Clinical Research and Medical Advisory | Abilitas Consulting</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Abilitas Consulting, Singapore. Interim leadership across Asia-Pacific with Gunther Scherz, MBA, and clinical research and medical advisory for the aesthetics industry with Dr. Sylvia Ramirez, MD, MPH, MBA.">
-<meta property="og:title" content="Abilitas Consulting">
-<meta property="og:description" content="The capacity to lead, and the capacity to prove. Interim leadership and clinical research advisory from Singapore.">
+<meta name="description" content="Dr. Sylvia Ramirez, MD, MPH, MBA. Principal investigator, advisory board chair and faculty trainer for the aesthetics industry. Based in Singapore.">
+<meta property="og:title" content="Dr. Sylvia Ramirez | Clinical Research and Medical Advisory">
+<meta property="og:description" content="Study design, investigator leadership and advisory input for aesthetic medicine.">
 <meta property="og:type" content="website">
-<link rel="canonical" href="https://abilitasconsulting.com/">
+<link rel="canonical" href="https://abilitasconsulting.com/medical/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital@0;1&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-/* Layout: a Latin dictionary entry. The firm's name is the headword; its two senses are the two practices, side by side. */
-:root{
-  --paper:#F5F6F3;
-  --ink:#13212B;
-  --muted:#52606A;
-  --rule:#D6DBDA;
-  --jade:#0D6352;
-  --jade-tint:#E1EDE8;
-  --glow:#5CC9A7;
-  --on-ink:#F5F6F3;
-  --on-ink-muted:#A9B6BC;
-  --ink-rule:#2C3B45;
-  --display:"Libre Caslon Display",Georgia,"Times New Roman",serif;
-  --serif:"Libre Caslon Text",Georgia,"Times New Roman",serif;
-  --text:"Hanken Grotesk",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  --wide:1240px;
-  color-scheme:light;
-}
-*{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
-a{color:var(--jade);text-underline-offset:3px;text-decoration-thickness:1px}
-a:focus-visible{outline:2px solid var(--jade);outline-offset:3px;border-radius:2px}
-h1,h2,h3{font-weight:400;margin:0;text-wrap:balance}
-p{margin:0}
-.wrap{max-width:var(--wide);margin:0 auto;padding-left:max(28px,env(safe-area-inset-left,0px));padding-right:max(28px,env(safe-area-inset-right,0px))}
-
-/* Masthead */
-.top{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding-block:28px;border-bottom:1px solid var(--rule)}
-.top .name{font-weight:600;color:var(--ink);text-decoration:none;font-size:17px;letter-spacing:.01em}
-.top nav{display:flex;flex-wrap:wrap;gap:8px 28px;font-size:16px}
-.top nav a{color:var(--muted);text-decoration:none}
-.top nav a:hover{color:var(--ink)}
-
-/* The entry */
-.entry{padding-block:clamp(40px,7vw,88px) clamp(28px,4vw,48px)}
-.head-meta{font-family:var(--serif);font-size:clamp(17px,1.6vw,20px);color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 18px;align-items:baseline}
-.head-meta i{color:var(--ink)}
-.headword{font-family:var(--display);font-size:clamp(84px,26vw,440px);line-height:.86;letter-spacing:-.025em;margin-top:clamp(10px,1.6vw,20px);margin-left:-.04em;color:var(--ink);white-space:nowrap}
-.headword .syl{position:relative}
-.gloss{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);margin-top:clamp(28px,4vw,48px);align-items:start}
-.gloss .def{font-family:var(--serif);font-size:clamp(22px,2.3vw,30px);line-height:1.35;max-width:26ch}
-.gloss .def em{color:var(--muted)}
-.gloss .firm{color:var(--muted);max-width:52ch;padding-top:6px}
-.gloss .firm b{color:var(--ink);font-weight:600}
-
-/* Senses */
-.senses{display:flex;gap:0}
-.sense{position:relative;flex:1 1 0;min-height:0;min-width:0;overflow:hidden;display:flex;flex-direction:column;padding:clamp(32px,4vw,56px);text-decoration:none;color:inherit;transition:flex-grow .5s cubic-bezier(.3,.6,.2,1)}
-.sense.lead{background:var(--ink);color:var(--on-ink)}
-.sense.prove{background:var(--jade-tint);color:var(--ink)}
-.sense .num{font-family:var(--display);font-size:clamp(44px,5vw,72px);line-height:1;color:var(--glow)}
-.sense.prove .num{color:var(--jade)}
-.sense .what{font-family:var(--serif);font-style:italic;font-size:clamp(17px,1.5vw,19px);margin-top:14px}
-.sense.lead .what{color:var(--on-ink-muted)}
-.sense.prove .what{color:var(--muted)}
-.sense h2{font-family:var(--display);font-size:clamp(34px,3.6vw,52px);line-height:1.04;letter-spacing:-.01em;margin-top:10px;max-width:13ch;position:relative;z-index:2}
-.sense .who{margin-top:22px;font-weight:600;font-size:17px;position:relative;z-index:2}
-.sense .who span{display:block;font-weight:400;font-size:16px}
-.sense.lead .who span{color:var(--on-ink-muted)}
-.sense.prove .who span{color:var(--muted)}
-.examples{list-style:none;margin:auto 0 0;padding:28px 0 0;position:relative;z-index:2;display:grid;gap:0;max-width:46ch}
-.examples li{display:grid;grid-template-columns:7.5em minmax(0,1fr);gap:16px;align-items:baseline;padding-block:12px;font-size:16px;line-height:1.45}
-.sense.lead .examples li{border-top:1px solid var(--ink-rule);color:var(--on-ink-muted)}
-.sense.prove .examples li{border-top:1px solid #BFD6CE;color:#2E4048}
-.examples b{font-family:var(--display);font-weight:400;font-size:24px;line-height:1.1;white-space:nowrap}
-.sense.lead .examples b{color:#FFFFFF}
-.sense.prove .examples b{color:var(--jade)}
-.go{margin-top:26px;position:relative;z-index:2;font-weight:600;font-size:17px;display:inline-flex;gap:10px;align-items:center;align-self:flex-start;border-bottom:1.5px solid currentColor;padding-bottom:3px}
-.sense.lead .go{color:var(--glow)}
-.sense.prove .go{color:var(--jade)}
-.sense:focus-visible{outline:3px solid var(--glow);outline-offset:-6px}
-.art{display:flex;justify-content:flex-end;height:clamp(170px,19vw,250px);margin:-6px -8px 18px 0;pointer-events:none}
-.art svg{display:block;height:100%;width:auto;max-width:100%}
-.map .arc{fill:none;stroke:var(--glow);stroke-width:1.6;stroke-linecap:round}
-.map .pt{fill:var(--glow)}
-.map{overflow:visible}
-.map .home{fill:none;stroke:var(--glow);stroke-width:1.2;opacity:.55}
-.map text{font-family:var(--text);font-size:21px;font-weight:500;fill:var(--on-ink-muted)}
-.map .grid circle{fill:#22333E}
-.curve .ax{stroke:#9FBFB3;stroke-width:1.2}
-.curve .tk{stroke:#9FBFB3;stroke-width:1}
-.curve .band{fill:var(--jade);opacity:.09}
-.curve .line{fill:none;stroke:var(--jade);stroke-width:2.2;stroke-linejoin:round}
-.curve .line2{fill:none;stroke:#6FA493;stroke-width:1.6;stroke-dasharray:5 5;stroke-linejoin:round}
-.curve .cens{stroke:var(--jade);stroke-width:1.4}
-.curve text{font-family:var(--serif);font-style:italic;font-size:17px;fill:#4E6A61}
-@media (hover:hover) and (min-width:901px){
-  .senses:hover .sense{flex-grow:.82}
-  .senses .sense:hover,.senses .sense:focus-visible{flex-grow:1.18}
-}
-
-/* Shared ground */
-.ground{padding-block:clamp(72px,9vw,120px) 0}
-.ground h2{font-family:var(--display);font-size:clamp(34px,4vw,52px);line-height:1.06;letter-spacing:-.01em;max-width:20ch}
-.ground .intro{margin-top:18px;color:var(--muted);max-width:60ch}
-.facts{margin-top:48px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:2px solid var(--ink)}
-.fact{padding:28px 28px 30px 0;min-width:0}
-.fact + .fact{padding-left:28px;border-left:1px solid var(--rule)}
-.fact h3{font-family:var(--display);font-size:26px;line-height:1.2;margin-bottom:10px}
-.fact p{color:var(--muted);font-size:16px}
-
-/* Provenance */
-.built{margin-top:clamp(64px,8vw,104px);border-top:1px solid var(--rule);padding-top:28px}
-.built h3{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--muted)}
-.names{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px 34px;font-family:var(--display);font-size:clamp(24px,2.6vw,34px);line-height:1.3}
-.names li{white-space:nowrap}
-.names .s{color:var(--jade)}
-
-/* Contact */
-.contact{margin-top:clamp(80px,10vw,128px);background:var(--ink);color:var(--on-ink)}
-.contact .wrap{padding-block:clamp(64px,8vw,96px)}
-.contact h2{font-family:var(--display);font-size:clamp(36px,4.6vw,60px);line-height:1.05;max-width:18ch}
-.contact .intro{color:var(--on-ink-muted);margin-top:18px;max-width:54ch}
-.contacts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px;margin-top:44px;border-top:1px solid var(--ink-rule);padding-top:32px}
-.contacts .role{font-family:var(--serif);font-style:italic;color:var(--on-ink-muted);font-size:17px}
-.contacts .person{font-weight:600;margin-top:2px}
-.contacts .mail{display:inline-block;margin-top:12px;font-family:var(--display);font-size:clamp(22px,2.4vw,30px);color:var(--on-ink);text-decoration:none;border-bottom:1.5px solid rgba(245,246,243,.4);padding-bottom:3px;overflow-wrap:anywhere}
-.contacts .mail:hover{border-bottom-color:var(--glow)}
-.contact a:focus-visible{outline-color:var(--glow)}
-footer{padding-block:28px 40px;font-size:14px;color:var(--muted)}
-
-/* One orchestrated moment: the headword is set, then the senses arrive */
-@media (prefers-reduced-motion:no-preference){
-  .headword .syl{display:inline-block;animation:set .9s cubic-bezier(.2,.7,.2,1) both}
-  .headword .syl:nth-child(2){animation-delay:.08s}
-  .headword .syl:nth-child(3){animation-delay:.16s}
-  .headword .syl:nth-child(4){animation-delay:.24s}
-  .map .arc{stroke-dasharray:var(--len);stroke-dashoffset:var(--len);animation:draw 1.4s cubic-bezier(.3,.6,.2,1) forwards;animation-delay:calc(.7s + var(--i) * .12s)}
-  .curve .line{stroke-dasharray:900;stroke-dashoffset:900;animation:draw 1.8s cubic-bezier(.3,.6,.2,1) .8s forwards}
-  @keyframes set{from{opacity:.001;transform:translateY(.12em)}to{opacity:1;transform:none}}
-  @keyframes draw{to{stroke-dashoffset:0}}
-}
-
-@media (max-width:900px){
-  .gloss{grid-template-columns:1fr;gap:18px}
-  .senses{flex-direction:column;min-height:0}
-  .sense{flex:none}
-  .facts{grid-template-columns:1fr}
-  .fact,.fact + .fact{padding:24px 0;border-left:none;border-bottom:1px solid var(--rule)}
-  .contacts{grid-template-columns:1fr;gap:28px}
-}
-@media (max-width:560px){
-  body{font-size:17px}
-  .wrap{padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
-  .top{flex-direction:column;gap:10px}
-  .top nav{gap:6px 18px}
-  .art{height:auto;justify-content:flex-start;margin-right:0}
-  .art svg{width:100%;height:auto}
-  .examples li{grid-template-columns:6.5em minmax(0,1fr)}
-  .examples b{font-size:21px}
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/abilitas.css">
 </head>
 <body>
 
+<div class="stage">
 <div class="wrap">
   <header class="top">
-    <a class="name" href="./">Abilitas Consulting</a>
+    <a class="name" href="../">Abilitas Consulting <span class="who">/ Dr. Sylvia Ramirez</span></a>
     <nav aria-label="Primary">
-      <a href="interim/">Interim leadership</a>
-      <a href="medical/">Clinical research and advisory</a>
+      <a href="#services">What I do</a>
+      <a href="#research">Research record</a>
+      <a href="#publications">Publications</a>
+      <a href="#credentials">Credentials</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <section class="entry" aria-labelledby="hw">
-    <p class="head-meta"><span>a&middot;bi&middot;li&middot;tas</span><i>noun, feminine. Latin</i><span>from <i>habilis</i>, able, fit for the task</span></p>
-    <h1 class="headword" id="hw" aria-label="Abilitas"><span class="syl">A</span><span class="syl">bi</span><span class="syl">li</span><span class="syl">tas</span></h1>
-    <div class="gloss">
-      <p class="def">Ability; aptitude; the capacity to do a thing well. <em>In this firm, in two senses.</em></p>
-      <p class="firm"><b>Abilitas Consulting</b> is the Singapore firm through which Gunther Scherz takes interim leadership mandates across Asia-Pacific, and Dr. Sylvia Ramirez advises the aesthetics industry on clinical research and medical affairs. Each practice is led and delivered personally by its principal.</p>
+  <section class="hero">
+    <p class="eyebrow">Clinical research and medical advisory</p>
+    <h1>Clinical evidence and medical advisory for aesthetic medicine.</h1>
+    <p class="lede">I design and lead clinical studies, chair advisory boards and train faculty for aesthetics companies. My research career began in 1994 at Harvard Medical School and runs through US national program evaluations to investigator-initiated studies in aesthetic medicine today.</p>
+    <p class="creds">Sylvia Ramirez, MD, MPH, MBA, Dip Derm, MSc &middot; Singapore</p>
+    <div class="ctas">
+      <a class="btn primary" href="#contact">Discuss a study or advisory board</a>
+      <a class="btn ghost" href="#research">See the research record</a>
     </div>
   </section>
 </div>
+</div>
 
-<section class="senses" aria-label="The two practices">
-  <a class="sense lead" href="interim/">
-    <div class="art" aria-hidden="true">
-      <svg class="map" viewBox="0 0 640 440" role="presentation">
-        <g class="grid" id="dots"></g>
-        <path class="arc" style="--len:120;--i:0" d="M240 214 Q 214 160 210 116"/>
-        <path class="arc" style="--len:60;--i:1" d="M240 214 Q 228 198 222 200"/>
-        <path class="arc" style="--len:110;--i:2" d="M240 214 Q 268 240 262 290"/>
-        <path class="arc" style="--len:420;--i:3" d="M240 214 Q 430 230 520 384"/>
-        <path class="arc" style="--len:520;--i:4" d="M240 214 Q 520 200 612 404"/>
-        <circle class="home" cx="240" cy="214" r="13"/>
-        <circle class="pt" cx="240" cy="214" r="5"/>
-        <circle class="pt" cx="210" cy="116" r="3.6"/>
-        <circle class="pt" cx="222" cy="200" r="3.6"/>
-        <circle class="pt" cx="262" cy="290" r="3.6"/>
-        <circle class="pt" cx="520" cy="384" r="3.6"/>
-        <circle class="pt" cx="612" cy="404" r="3.6"/>
-        <text x="252" y="232">Singapore</text>
-        <text x="160" y="102">Thailand</text>
-        <text x="118" y="196">Malaysia</text>
-        <text x="272" y="306">Indonesia</text>
-        <text x="420" y="404">Australia</text>
-        <text x="512" y="434">New Zealand</text>
-      </svg>
-    </div>
-    <span class="num">1.</span>
-    <p class="what">The capacity to lead</p>
-    <h2>A leader in the seat next month, not next year.</h2>
-    <p class="who">Gunther Scherz, MBA<span>Interim country and general manager, three to nine month mandates</span></p>
-    <ul class="examples">
-      <li><b>Loss to profit</b><span>Proton Indonesia, a distressed US$38 million subsidiary</span></li>
-      <li><b>+28%</b><span>Audi ASEAN regional sales, Malaysia up 150 percent</span></li>
-      <li><b>7x EBITDA</b><span>Call Tracking Solutions, built and sold</span></li>
-    </ul>
-    <span class="go">Interim leadership</span>
-  </a>
-
-  <a class="sense prove" href="medical/">
-    <div class="art" aria-hidden="true">
-      <svg class="curve" viewBox="0 0 430 300" role="presentation">
-        <path class="band" d="M40 30 H112 V52 H176 V80 H236 V96 H300 V126 H370 V146 H404 V182 H370 V164 H300 V146 H236 V118 H176 V102 H112 V72 H40 Z"/>
-        <path class="line2" d="M40 40 H96 V78 H150 V118 H204 V150 H262 V186 H318 V214 H404"/>
-        <path class="line" d="M40 40 H112 V62 H176 V90 H236 V107 H300 V136 H370 V155 H404"/>
-        <line class="cens" x1="146" y1="56" x2="146" y2="68"/><line class="cens" x1="214" y1="84" x2="214" y2="96"/><line class="cens" x1="280" y1="101" x2="280" y2="113"/><line class="cens" x1="340" y1="130" x2="340" y2="142"/>
-        <line class="ax" x1="40" y1="20" x2="40" y2="250"/>
-        <line class="ax" x1="40" y1="250" x2="410" y2="250"/>
-        <line class="tk" x1="132" y1="250" x2="132" y2="256"/><line class="tk" x1="224" y1="250" x2="224" y2="256"/><line class="tk" x1="316" y1="250" x2="316" y2="256"/><line class="tk" x1="408" y1="250" x2="408" y2="256"/>
-        <text x="40" y="282">time on study</text>
-      </svg>
-    </div>
-    <span class="num">2.</span>
-    <p class="what">The capacity to prove</p>
-    <h2>Evidence designed, run and published.</h2>
-    <p class="who">Dr. Sylvia Ramirez, MD, MPH, MBA<span>Principal investigator and medical advisor to the aesthetics industry</span></p>
-    <ul class="examples">
-      <li><b>PI</b><span>Two US national Medicare program evaluations</span></li>
-      <li><b>10 years</b><span>Steering Committee, Dialysis Outcomes and Practice Patterns Study, 2005 to 2015</span></li>
-      <li><b>45+</b><span>Publications and book chapters, nephrology to aesthetic medicine</span></li>
-    </ul>
-    <span class="go">Clinical research and advisory</span>
-  </a>
+<section class="results" aria-label="Selected record">
+  <div class="wrap">
+    <div class="result"><span class="fig">PI</span><p><strong>Two US CMS evaluations.</strong> Principal investigator of national Medicare demonstration evaluations; co-PI of the CMS ESRD Core Performance Measures and the CDC CKD registry.</p></div>
+    <div class="result"><span class="fig">3 boards</span><p><strong>Chaired for Allergan Aesthetics in 2025.</strong> Medical advisory boards on skin quality, biostimulation and a neuromodulator launch.</p></div>
+    <div class="result"><span class="fig">2005 to 2015</span><p><strong>DOPPS Steering Committee.</strong> The international Dialysis Outcomes and Practice Patterns Study.</p></div>
+    <div class="result"><span class="fig">MPH</span><p><strong>Harvard School of Public Health.</strong> Quantitative methods: study design, biostatistics and epidemiology.</p></div>
+  </div>
 </section>
 
-<section class="ground" aria-labelledby="ground-h">
+<section class="section" id="services">
   <div class="wrap">
-    <h2 id="ground-h">Two independent practices, one working relationship since 2007</h2>
-    <p class="intro">The principals co-founded <a href="https://www.cutislaserclinics.com" rel="noopener">Cutis Medical Laser Clinics</a> in Singapore in 2007 and lead it today: Dr. Sylvia Ramirez as Medical and Scientific Director, Gunther Scherz as Managing Director. Running a medical aesthetics practice together for nearly two decades is where the two disciplines met: clinical evidence and medical governance on one side, P&amp;L, operations and growth on the other. They have published together since 2021. Each practice is contracted through Abilitas Consulting and delivered by its principal in person.</p>
-    <div class="facts">
-      <div class="fact"><h3>No leverage model</h3><p>No junior teams and no hand-offs. The principal you meet is the person who does the work.</p></div>
-      <div class="fact"><h3>Based in Singapore</h3><p>Both principals are based in Singapore, where no work permit is required, and both work on site across Asia-Pacific.</p></div>
-      <div class="fact"><h3>A shared research record</h3><p>Seven peer-reviewed papers and book chapters co-authored since 2021, on aesthetic medicine, patient decision-making and ethics.</p></div>
+    <h2>What I'm engaged for</h2>
+    <p class="intro">My clients are aesthetics pharmaceutical and device companies, their medical affairs teams, and research partners. I do not offer patient consultations or treatment through this practice.</p>
+    <div class="situations">
+      <article class="situation">
+        <h3>You need a principal investigator who can design, run and publish the study.</h3>
+        <div>
+          <p>I take the site PI role from protocol to manuscript: endpoints and sample size, instruments and imaging, ethics submission, site budget, recruitment, data quality and the paper. Operations and budget governance are handled within the firm, so the medical team stays on the science.</p>
+          <p class="proof"><b>Current work:</b> Singapore site PI for a two-site investigator-initiated study on cannula delivery of a skin-quality injectable, run jointly with a US research center, about 30 participants at the Singapore site. Investigator in a multicenter long-term real-world study of onabotulinumtoxinA since 2024.</p>
+        </div>
+      </article>
+      <article class="situation">
+        <h3>You need credible medical input before a launch or a label decision.</h3>
+        <div>
+          <p>I chair and contribute to advisory boards and consensus panels, frame the clinical questions before the meeting, and write the output in a form medical affairs can use.</p>
+          <p class="proof"><b>Done before:</b> chaired Allergan Aesthetics medical advisory boards for skin quality (March 2025), a pre-launch neuromodulator board (March 2025) and biostimulation (November 2025); member of a Delphi consensus panel on fillers in Asian patients (October 2025).</p>
+        </div>
+      </article>
+      <article class="situation">
+        <h3>Your trainers and faculty need scientific depth, not just technique.</h3>
+        <div>
+          <p>I build and deliver faculty programs and symposium content that cover the evidence, the pharmacology and the clinical reasoning behind each technique.</p>
+          <p class="proof"><b>Done before:</b> Allergan Aesthetics International Faculty; trained new Allergan trainers on onabotulinumtoxinA (September 2026); symposium speaker for Allergan Aesthetics Thailand at AMWC Southeast Asia, Bangkok (November 2026); lecture selected for IMCAS Academy.</p>
+        </div>
+      </article>
+      <article class="situation">
+        <h3>You want evidence on ethics, consent and patient decision-making.</h3>
+        <div>
+          <p>I research and publish on how patients choose aesthetic treatment and what ethical practice requires of clinicians and companies, and I advise on consent and patient communication frameworks.</p>
+          <p class="proof"><b>Published:</b> a review on the primacy of ethics in aesthetic medicine (Plastic and Reconstructive Surgery Global Open, 2024) and a book chapter on medical ethics in aesthetic practice (IntechOpen, 2025), with further work under review.</p>
+        </div>
+      </article>
     </div>
+  </div>
+</section>
 
-    <div class="built">
-      <h3>Where the experience was built</h3>
-      <ul class="names">
-        <li>Audi Asia Pacific</li>
-        <li>Proton</li>
-        <li>J.D. Power</li>
-        <li>Chicago Booth</li>
-        <li class="s">Harvard Medical School</li>
-        <li class="s">Harvard School of Public Health</li>
-        <li class="s">Arbor Research</li>
-        <li class="s">DaVita Asia Pacific</li>
-        <li class="s">National Kidney Foundation Singapore</li>
-      </ul>
+<section class="section" id="research">
+  <div class="wrap">
+    <h2>Research record</h2>
+    <p class="intro">Three decades of research leadership across academic medicine, public health and industry.</p>
+    <div class="career">
+      <div class="job"><span class="when">2008 to present</span><p class="what">Medical and Scientific Director<span>Cutis Medical Laser Clinics, Singapore</span></p><p class="won">Leads clinical research and medical governance; investigator-initiated studies, multicenter industry studies and peer-reviewed publication.</p></div>
+      <div class="job"><span class="when">2013 to 2018</span><p class="what">Chief Medical Officer<span>DaVita Asia Pacific</span></p><p class="won">Clinical leadership and quality programs for a dialysis provider across the region.</p></div>
+      <div class="job"><span class="when">2006 to 2013</span><p class="what">Vice President, Global Research and Development<span>Arbor Research Collaborative for Health, Ann Arbor</span></p><p class="won">PI of two Centers for Medicare and Medicaid Services evaluations: the Disease Management Demonstration and the Quality Incentive Payment Demonstration. Co-PI of the CMS ESRD Core Performance Measures and the CDC CKD registry.</p></div>
+      <div class="job"><span class="when">2004 to 2005</span><p class="what">Vice President, Research<span>URREA</span></p><p class="won">Research leadership in kidney disease outcomes.</p></div>
+      <div class="job"><span class="when">1999 to 2004</span><p class="what">Chief, Center for Prevention and Research<span>National Kidney Foundation, Singapore</span></p><p class="won">Led the national kidney screening and prevention program; chaired the First International Summit on Kidney Disease Prevention (2002).</p></div>
+      <div class="job"><span class="when">1998 to 2004</span><p class="what">Pediatrics<span>National University Hospital and National University of Singapore</span></p><p class="won">Clinical and academic pediatrics and pediatric nephrology.</p></div>
+      <div class="job"><span class="when">1994 to 1997</span><p class="what">Clinical and Research Fellow, Nephrology<span>Children's Hospital, Harvard Medical School, Boston</span></p><p class="won">Research fellowship in pediatric nephrology.</p></div>
     </div>
+  </div>
+</section>
+
+<section class="section" id="publications">
+  <div class="wrap">
+    <h2>Publications and speaking</h2>
+    <p class="intro">More than 45 publications and book chapters across aesthetic medicine, nephrology, outcomes research and public health. A selection is below; the full list is available on request.</p>
+    <p class="subhead">Aesthetic medicine</p>
+    <ol class="pubs pubs-tight">
+      <li class="pub"><span class="yr">2025</span><div><h3><a href="https://doi.org/10.1111/jocd.70352" rel="noopener">Integrating VYC-12L with energy-based devices for skin-quality improvement: global expert considerations for safe and effective outcomes</a></h3><p class="by">Humphrey S, <b>Ramirez S</b>, Arreola J&aacute;uregui IE, et al.</p><p class="in">Journal of Cosmetic Dermatology, 24(7): e70352</p></div></li>
+      <li class="pub"><span class="yr">2025</span><div><h3><a href="https://doi.org/10.18103/mra.v13i6.6650" rel="noopener">Aesthetic impacts of elective hyaluronidase dissolution: a case report highlighting the restorative benefits of dermal fillers</a></h3><p class="by"><b>Ramirez SPB</b>, Scherz G</p><p class="in">Medical Research Archives, 13(6)</p></div></li>
+      <li class="pub"><span class="yr">2025</span><div><h3>It's how, not how much: case report on anatomy-guided high-volume filler use without overfilling</h3><p class="by"><b>Ramirez S</b>, et al.</p><p class="in">Journal of Dermatology Research, 6(2)</p></div></li>
+      <li class="pub"><span class="yr">2025</span><div><h3><a href="https://doi.org/10.5772/intechopen.1008821" rel="noopener">Redefining medical ethics in esthetic practice: balancing patient empowerment and professional responsibility</a></h3><p class="by"><b>Ramirez S</b>, Scherz G</p><p class="in">Book chapter in Global Bioethics: Current Challenges, New Developments, and Future Directions, IntechOpen</p></div></li>
+      <li class="pub"><span class="yr">2024</span><div><h3><a href="https://doi.org/10.1097/GOX.0000000000006210" rel="noopener">Pilot study: single-depth superficial ultrasound with subdermal injections of diluted calcium hydroxylapatite for improving lower face skin quality</a></h3><p class="by"><b>Ramirez S</b>, Scherz G, Leprince R</p><p class="in">Plastic and Reconstructive Surgery Global Open, 12(10): e6210</p></div></li>
+      <li class="pub"><span class="yr">2024</span><div><h3><a href="https://doi.org/10.1097/GOX.0000000000005935" rel="noopener">The primacy of ethics in aesthetic medicine: a review</a></h3><p class="by"><b>Ramirez S</b>, Cullen C, Ahdoot R, Scherz G</p><p class="in">Plastic and Reconstructive Surgery Global Open, 12(6): e5935</p></div></li>
+      <li class="pub"><span class="yr">2022</span><div><h3><a href="https://doi.org/10.2147/CCID.S367001" rel="noopener">Perceived stress and interest in non-invasive aesthetic procedures during the COVID-19 pandemic</a></h3><p class="by"><b>Ramirez SPB</b>, Scherz G, Smith H</p><p class="in">Clinical, Cosmetic and Investigational Dermatology, 15: 1247 to 1257</p></div></li>
+      <li class="pub"><span class="yr">2021</span><div><h3><a href="https://doi.org/10.1111/jocd.14573" rel="noopener">Effectiveness of combined microfocused ultrasound with visualization and subdermal calcium hydroxylapatite injections for the management of brachial skin laxity</a></h3><p class="by"><b>Ramirez S</b>, Puah IBK</p><p class="in">Journal of Cosmetic Dermatology, 20(12): 3871 to 3879</p></div></li>
+      <li class="pub"><span class="yr">2021</span><div><h3><a href="https://doi.org/10.2147/CCID.S296970" rel="noopener">Characteristics of patients seeking and proceeding with non-surgical facial aesthetic procedures</a></h3><p class="by"><b>Ramirez SPB</b>, Scherz G, Smith H</p><p class="in">Clinical, Cosmetic and Investigational Dermatology, 14: 197 to 207</p></div></li>
+    </ol>
+    <p class="subhead">Nephrology, outcomes research and epidemiology (selected)</p>
+    <ol class="pubs pubs-tight">
+      <li class="pub"><span class="yr">2014</span><div><h3><a href="https://doi.org/10.1371/journal.pmed.1001750" rel="noopener">Sex-specific differences in hemodialysis prevalence and practices and the male-to-female mortality rate: the Dialysis Outcomes and Practice Patterns Study (DOPPS)</a></h3><p class="by">Hecking M, Bieber BA, Ethier J, et al., <b>Ramirez SP</b>, et al.</p><p class="in">PLoS Medicine, 11(10): e1001750</p></div></li>
+      <li class="pub"><span class="yr">2014</span><div><h3>Two-times weekly hemodialysis in China: frequency, associated patient and treatment characteristics and quality of life in the China Dialysis Outcomes and Practice Patterns Study</h3><p class="by">Bieber B, Qian J, Anand S, et al., <b>Ramirez SP</b> (senior author)</p><p class="in">Nephrology Dialysis Transplantation, 29(9): 1770 to 1777</p></div></li>
+      <li class="pub"><span class="yr">2013</span><div><h3>Association between oral nutritional supplementation and clinical outcomes among patients with ESRD</h3><p class="by">Cheu C, Pearson J, Dahlerus C, et al., <b>Ramirez SP</b> (senior author)</p><p class="in">Clinical Journal of the American Society of Nephrology, 8(1): 100 to 107</p></div></li>
+      <li class="pub"><span class="yr">2012</span><div><h3>Hemoglobin A1c levels and mortality in the diabetic hemodialysis population: findings from the Dialysis Outcomes and Practice Patterns Study (DOPPS)</h3><p class="by"><b>Ramirez SP</b>, McCullough KP, Thumma JR, et al.</p><p class="in">Diabetes Care, 35(12): 2527 to 2532</p></div></li>
+      <li class="pub"><span class="yr">2012</span><div><h3>Dialysis dose scaled to body surface area and size-adjusted, sex-specific patient mortality</h3><p class="by"><b>Ramirez SP</b>, Kapke A, Port FK, et al.</p><p class="in">Clinical Journal of the American Society of Nephrology</p></div></li>
+      <li class="pub"><span class="yr">2009</span><div><h3>Rosiglitazone is associated with mortality in chronic hemodialysis patients</h3><p class="by"><b>Ramirez SP</b>, Albert JM, Blayney MJ, et al.</p><p class="in">Journal of the American Society of Nephrology, 20(5): 1094 to 1101</p></div></li>
+      <li class="pub"><span class="yr">2008</span><div><h3>Chronic kidney disease prevention in Singapore</h3><p class="by"><b>Ramirez SPB</b></p><p class="in">Clinical Journal of the American Society of Nephrology, 3(2): 610 to 615</p></div></li>
+      <li class="pub"><span class="yr">2003</span><div><h3>First International Summit on Kidney Disease Prevention: consensus document</h3><p class="by"><b>Ramirez SP</b> (guest editor) and Summit participants</p><p class="in">Journal of the American Society of Nephrology, 14(7 Suppl 2): S205 to S207</p></div></li>
+      <li class="pub"><span class="yr">2002</span><div><h3>Risk factors for proteinuria in a large multiracial Southeast Asian population</h3><p class="by"><b>Ramirez SPB</b>, McClellan W, Port FK, Hsu SI-H</p><p class="in">Journal of the American Society of Nephrology, 13: 1907 to 1917</p></div></li>
+    </ol>
+    <p class="subhead">Speaking and faculty</p>
+    <ol class="talks">
+      <li class="talk"><span class="yr">Nov 2026</span><div><h3>Multimodal approach to the upper face and periorbital area</h3><p>Allergan Aesthetics Thailand lunch symposium, AMWC Southeast Asia, Bangkok</p></div></li>
+      <li class="talk"><span class="yr">Sep 2026</span><div><h3>OnabotulinumtoxinA: science and clinical practice for new trainers</h3><p>Allergan Aesthetics trainer program</p></div></li>
+      <li class="talk"><span class="yr">2026</span><div><h3>REFINE 2026 advisory meeting</h3><p>Chair</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" id="credentials">
+  <div class="wrap">
+    <h2>Education and credentials</h2>
+    <div class="schools">
+      <div class="school"><span class="deg">MD</span><span class="inst">University of the Philippines Manila</span><span class="where">1989</span></div>
+      <div class="school"><span class="deg">MPH, Quantitative Methods</span><span class="inst">Harvard School of Public Health</span><span class="where">1998</span></div>
+      <div class="school"><span class="deg">Executive MBA</span><span class="inst">University of Chicago Graduate School of Business</span><span class="where">2005</span></div>
+      <div class="school"><span class="deg">MSc, Non-Surgical Facial Aesthetics</span><span class="inst">Anglia Ruskin University</span><span class="where">2018, with Distinction</span></div>
+      <div class="school"><span class="deg">Diploma in Practical Dermatology</span><span class="inst">Cardiff University</span><span class="where">2011</span></div>
+      <div class="school"><span class="deg">Residency and Chief Residency</span><span class="inst">Montefiore Medical Center, Albert Einstein College of Medicine</span><span class="where">Bronx, New York, 1990 to 1994</span></div>
+    </div>
+    <p class="subhead">Certification, registration and appointments</p>
+    <ul class="certs">
+      <li class="cert"><span class="by">American Board of Pediatrics</span><span class="what">Board certified in Pediatrics (1994) and Pediatric Nephrology (1997)</span></li>
+      <li class="cert"><span class="by">Singapore Medical Council</span><span class="what">Full registration since 2007</span></li>
+      <li class="cert"><span class="by">Singapore Society of Aesthetic Medicine</span><span class="what">Board member, 2025 to 2027</span></li>
+      <li class="cert"><span class="by">Allergan Aesthetics</span><span class="what">International Faculty</span></li>
+      <li class="cert"><span class="by">DOPPS</span><span class="what">Steering Committee member, 2005 to 2015</span></li>
+      <li class="cert"><span class="by">State of Iowa</span><span class="what">Medical license</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="terms">
+  <div class="wrap">
+    <h2>Working together</h2>
+    <dl class="terms">
+      <div class="term"><dt>Clients</dt><dd>Aesthetics pharmaceutical and device companies, medical affairs teams and research partners</dd></div>
+      <div class="term"><dt>Engagements</dt><dd>Study PI, advisory boards, consensus panels, faculty training, symposium content and manuscripts</dd></div>
+      <div class="term"><dt>Location</dt><dd>Based in Singapore; available across Asia-Pacific and at international congresses</dd></div>
+      <div class="term"><dt>Contracting</dt><dd>Through Abilitas Consulting, at fair market value, under written agreements</dd></div>
+      <div class="term"><dt>Compliance</dt><dd>Engagements follow each sponsor's compliance and disclosure requirements</dd></div>
+      <div class="term"><dt>Study operations</dt><dd>Site budgets, contracts and research governance managed within the firm</dd></div>
+    </dl>
+    <p class="note">This practice provides research and advisory services to organizations. It does not offer medical consultations, diagnosis or treatment to the public.</p>
   </div>
 </section>
 
 <section class="contact" id="contact">
   <div class="wrap">
-    <h2>Start with a short email to the right principal.</h2>
-    <p class="intro">Describe the situation and the timing. A reply comes from the person who would do the work.</p>
-    <div class="contacts">
-      <div>
-        <p class="role">Interim leadership</p>
-        <p class="person">Gunther Scherz, MBA</p>
-        <a class="mail" href="mailto:gunther.scherz@gmail.com?subject=Interim%20mandate">gunther.scherz@gmail.com</a>
-      </div>
-      <div>
-        <p class="role">Clinical research and medical advisory</p>
-        <p class="person">Dr. Sylvia Ramirez, MD, MPH, MBA</p>
-        <a class="mail" href="mailto:sylvia@abilitasconsulting.com?subject=Research%20or%20advisory%20enquiry">sylvia@abilitasconsulting.com</a>
-      </div>
+    <h2>Tell me about the study or the board.</h2>
+    <p class="intro">A short email with the product area, the question you need answered and your timing is enough to start.</p>
+    <a class="mail" href="mailto:sylvia@abilitasconsulting.com?subject=Research%20or%20advisory%20enquiry">sylvia@abilitasconsulting.com</a>
+    <div class="alt">
+      <a href="../">Abilitas Consulting</a>
+      <a href="../interim/">Interim leadership with Gunther Scherz, MBA</a>
     </div>
   </div>
 </section>
 
-<div class="wrap"><footer>Abilitas Consulting, Singapore, 2026</footer></div>
+<div class="wrap"><footer>Abilitas Consulting, Singapore. Clinical research and medical advisory: Dr. Sylvia Ramirez. Interim leadership: <a href="../interim/">Gunther Scherz, MBA</a>.</footer></div>
 
-<script>
-/* Texture for the route map: a sparse dot field for the region's land masses. */
-(function(){
-  var g=document.getElementById('dots'); if(!g) return;
-  var blobs=[[150,90,70,60],[230,190,50,40],[270,280,90,34],[500,330,110,70],[600,395,22,32],[330,250,40,20],[60,60,90,70]];
-  var ns='http://www.w3.org/2000/svg', s=11;
-  for(var y=10;y<440;y+=s){for(var x=10;x<640;x+=s){
-    for(var i=0;i<blobs.length;i++){var b=blobs[i],dx=(x-b[0])/b[2],dy=(y-b[1])/b[3];
-      if(dx*dx+dy*dy<1){var c=document.createElementNS(ns,'circle');c.setAttribute('cx',x);c.setAttribute('cy',y);c.setAttribute('r',1.6);g.appendChild(c);break;}}
-  }}
-})();
-</script>
 </body>
 </html>
