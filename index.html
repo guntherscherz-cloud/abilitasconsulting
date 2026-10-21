@@ -59,6 +59,8 @@ p{margin:0}
 .principal{display:flex;flex-direction:column;min-width:0;padding:clamp(28px,3.6vw,52px)}
 .principal.lead{background:var(--ink);color:var(--on-ink);padding-left:max(28px,calc((100vw - var(--wide)) / 2 + 28px))}
 .principal.prove{background:var(--jade-tint);color:var(--ink);padding-right:max(28px,calc((100vw - var(--wide)) / 2 + 28px))}
+.principal .id{margin-bottom:clamp(24px,2.6vw,36px)}
+.principal h2{white-space:nowrap}
 .principal .body{display:flex;flex-direction:column;flex:1;min-width:0}
 .portrait{position:relative;aspect-ratio:4/5;max-width:260px;width:60%;margin:0 0 clamp(26px,3vw,38px);overflow:hidden}
 .lead .portrait{background:#1E2F3A}
@@ -138,9 +140,10 @@ footer i{font-family:var(--serif)}
 }
 
 @media (min-width:1100px){
-  .principal{display:grid;grid-template-columns:minmax(0,.72fr) minmax(0,1fr);gap:clamp(28px,3vw,48px);align-items:stretch}
+  .principal{display:grid;grid-template-columns:minmax(0,.72fr) minmax(0,1fr);column-gap:clamp(28px,3vw,48px);grid-template-rows:auto 1fr;align-items:stretch}
+  .principal .id{grid-column:1 / -1}
   .portrait{width:100%;max-width:none;margin:0;align-self:start}
-  .principal h2{font-size:clamp(38px,3.3vw,58px)}
+  .principal h2{font-size:clamp(40px,3.4vw,60px)}
 }
 @media (max-width:900px){
   .opening{grid-template-columns:1fr;gap:16px}
@@ -184,13 +187,15 @@ footer i{font-family:var(--serif)}
 
 <section class="principals" aria-label="The two principals">
   <article class="principal lead">
+    <header class="id">
+      <h2>Gunther Scherz</h2>
+      <p class="creds">MBA, Chicago Booth</p>
+    </header>
     <div class="portrait">
       <span class="initials" aria-hidden="true">GS</span>
       <img src="images/gunther-scherz.jpg" alt="Gunther Scherz" width="800" height="1000" onerror="this.remove()">
     </div>
     <div class="body">
-    <h2>Gunther Scherz</h2>
-    <p class="creds">MBA, Chicago Booth</p>
     <p class="promise">A leader in the seat next month, not next year.</p>
     <p class="role">Interim country and general manager, three to nine month mandates across Asia-Pacific.</p>
     <span class="accent" aria-hidden="true"></span>
@@ -207,13 +212,15 @@ footer i{font-family:var(--serif)}
   </article>
 
   <article class="principal prove">
+    <header class="id">
+      <h2>Dr. Sylvia Ramirez</h2>
+      <p class="creds">MD, MPH, MBA</p>
+    </header>
     <div class="portrait">
       <span class="initials" aria-hidden="true">SR</span>
       <img src="images/sylvia-ramirez.jpg" alt="Dr. Sylvia Ramirez" width="800" height="1000" onerror="this.remove()">
     </div>
     <div class="body">
-    <h2>Dr. Sylvia Ramirez</h2>
-    <p class="creds">MD, MPH, MBA</p>
     <p class="promise">Evidence designed, run and published.</p>
     <p class="role">Principal investigator and medical advisor to the aesthetics industry.</p>
     <span class="accent" aria-hidden="true"></span>
