@@ -50,14 +50,16 @@ p{margin:0}
 
 /* Opening line: modest on purpose; the principals are the headline */
 .opening{padding-block:clamp(20px,4vw,48px) clamp(28px,4vw,44px);border-top:1px solid var(--rule)}
-.opening h1{font-family:var(--serif);font-size:clamp(22px,2.4vw,30px);line-height:1.35;max-width:44ch}
-.opening h1 span{color:var(--muted)}
+.opening{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:end}
+.opening h1{font-family:var(--display);font-size:clamp(34px,3.6vw,54px);line-height:1.08;letter-spacing:-.01em;max-width:26ch}
+.opening .sub{color:var(--muted);max-width:46ch;padding-bottom:6px}
 
 /* The two principals */
 .principals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
 .principal{display:flex;flex-direction:column;min-width:0;padding:clamp(28px,3.6vw,52px)}
 .principal.lead{background:var(--ink);color:var(--on-ink);padding-left:max(28px,calc((100vw - var(--wide)) / 2 + 28px))}
 .principal.prove{background:var(--jade-tint);color:var(--ink);padding-right:max(28px,calc((100vw - var(--wide)) / 2 + 28px))}
+.principal .body{display:flex;flex-direction:column;flex:1;min-width:0}
 .portrait{position:relative;aspect-ratio:4/5;max-width:260px;width:60%;margin:0 0 clamp(26px,3vw,38px);overflow:hidden}
 .lead .portrait{background:#1E2F3A}
 .prove .portrait{background:#C9DDD5}
@@ -135,7 +137,13 @@ footer i{font-family:var(--serif)}
   @keyframes draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 }
 
+@media (min-width:1100px){
+  .principal{display:grid;grid-template-columns:minmax(0,.72fr) minmax(0,1fr);gap:clamp(28px,3vw,48px);align-items:stretch}
+  .portrait{width:100%;max-width:none;margin:0;align-self:start}
+  .principal h2{font-size:clamp(38px,3.3vw,58px)}
+}
 @media (max-width:900px){
+  .opening{grid-template-columns:1fr;gap:16px}
   .principals{grid-template-columns:1fr}
   .principal.lead,.principal.prove{padding-left:max(28px,env(safe-area-inset-left,0px));padding-right:max(28px,env(safe-area-inset-right,0px))}
   .portrait{width:46%}
@@ -169,7 +177,8 @@ footer i{font-family:var(--serif)}
   </header>
 
   <section class="opening">
-    <h1>Interim leadership across Asia-Pacific, and clinical research for the aesthetics industry. <span>Two practices from Singapore, each delivered in person by its principal.</span></h1>
+    <h1>Interim leadership across Asia-Pacific, and clinical research for the aesthetics industry.</h1>
+    <p class="sub">Two independent practices from Singapore, each delivered in person by its principal. No junior teams, no hand-offs: the person you meet is the person who does the work.</p>
   </section>
 </div>
 
@@ -179,6 +188,7 @@ footer i{font-family:var(--serif)}
       <span class="initials" aria-hidden="true">GS</span>
       <img src="images/gunther-scherz.jpg" alt="Gunther Scherz" width="800" height="1000" onerror="this.remove()">
     </div>
+    <div class="body">
     <h2>Gunther Scherz</h2>
     <p class="creds">MBA, Chicago Booth</p>
     <p class="promise">A leader in the seat next month, not next year.</p>
@@ -193,6 +203,7 @@ footer i{font-family:var(--serif)}
       <a class="btn" href="mailto:gunther.scherz@gmail.com?subject=Interim%20mandate">Email Gunther</a>
       <a class="more" href="interim.html">Interim leadership</a>
     </div>
+    </div>
   </article>
 
   <article class="principal prove">
@@ -200,6 +211,7 @@ footer i{font-family:var(--serif)}
       <span class="initials" aria-hidden="true">SR</span>
       <img src="images/sylvia-ramirez.jpg" alt="Dr. Sylvia Ramirez" width="800" height="1000" onerror="this.remove()">
     </div>
+    <div class="body">
     <h2>Dr. Sylvia Ramirez</h2>
     <p class="creds">MD, MPH, MBA</p>
     <p class="promise">Evidence designed, run and published.</p>
@@ -213,6 +225,7 @@ footer i{font-family:var(--serif)}
     <div class="actions">
       <a class="btn" href="mailto:sylvia@abilitasconsulting.com?subject=Research%20or%20advisory%20enquiry">Email Sylvia</a>
       <a class="more" href="medical.html">Clinical research and advisory</a>
+    </div>
     </div>
   </article>
 </section>
