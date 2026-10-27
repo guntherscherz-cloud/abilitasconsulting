@@ -16,6 +16,8 @@
 /* Layout: two signatures. The firm is two principals, so the page opens on the two of them, side by side,
    each with their own promise, proof and direct line. Same tokens as interim.html and medical.html. */
 :root{
+  --pad:clamp(28px,3.6vw,52px);
+  --gutter:calc(var(--pad) * 2);
   --paper:#F5F6F3;
   --ink:#13212B;
   --muted:#52606A;
@@ -50,13 +52,13 @@ p{margin:0}
 
 /* Opening line: modest on purpose; the principals are the headline */
 .opening{padding-block:clamp(20px,4vw,48px) clamp(28px,4vw,44px);border-top:1px solid var(--rule)}
-.opening{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:end}
+.opening{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--gutter);align-items:end}
 .opening h1{font-family:var(--display);font-size:clamp(34px,3.6vw,54px);line-height:1.08;letter-spacing:-.01em;max-width:26ch}
 .opening .sub{color:var(--muted);max-width:46ch;padding-bottom:6px}
 
 /* The two principals */
 .principals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
-.principal{display:flex;flex-direction:column;min-width:0;padding:clamp(28px,3.6vw,52px)}
+.principal{display:flex;flex-direction:column;min-width:0;padding:var(--pad)}
 .principal.lead{background:var(--ink);color:var(--on-ink);padding-left:max(28px,calc((100vw - var(--wide)) / 2 + 28px))}
 .principal.prove{background:var(--jade-tint);color:var(--ink);padding-right:max(28px,calc((100vw - var(--wide)) / 2 + 28px))}
 .principal .id{margin-bottom:clamp(24px,2.6vw,36px)}
@@ -101,7 +103,7 @@ p{margin:0}
 /* Shared ground */
 .ground{padding-block:clamp(72px,9vw,120px) 0}
 .ground h2{font-family:var(--display);font-size:clamp(34px,4vw,52px);line-height:1.06;letter-spacing:-.01em;max-width:20ch}
-.ground-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(32px,6vw,96px);align-items:start}
+.ground-head{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--gutter);align-items:start}
 .ground .intro{color:var(--muted);max-width:60ch;padding-top:8px}
 .facts{margin-top:48px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:2px solid var(--ink)}
 .fact{padding:28px 28px 30px 0;min-width:0}
@@ -121,7 +123,7 @@ p{margin:0}
 .contact .wrap{padding-block:clamp(64px,8vw,96px)}
 .contact h2{font-family:var(--display);font-size:clamp(36px,4.6vw,60px);line-height:1.05;max-width:18ch}
 .contact .intro{color:var(--on-ink-muted);margin-top:18px;max-width:54ch}
-.contacts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px;margin-top:44px;border-top:1px solid var(--ink-rule);padding-top:32px}
+.contacts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--gutter);row-gap:28px;margin-top:44px;border-top:1px solid var(--ink-rule);padding-top:32px}
 .contacts .role{font-family:var(--serif);font-style:italic;color:var(--on-ink-muted);font-size:17px}
 .contacts .person{font-weight:600;margin-top:2px}
 .contacts .mail{display:inline-block;margin-top:12px;font-family:var(--display);font-size:clamp(22px,2.4vw,30px);color:var(--on-ink);text-decoration:none;border-bottom:1.5px solid rgba(245,246,243,.4);padding-bottom:3px;overflow-wrap:anywhere}
@@ -140,9 +142,14 @@ footer i{font-family:var(--serif)}
 }
 
 @media (min-width:1100px){
-  .principal{display:grid;grid-template-columns:minmax(0,.72fr) minmax(0,1fr);column-gap:clamp(28px,3vw,48px);grid-template-rows:auto 1fr;align-items:stretch}
+  .principals{grid-template-rows:repeat(7,auto) 1fr}
+  .principal{display:grid;grid-row:1 / -1;grid-template-rows:subgrid;grid-template-columns:minmax(0,.72fr) minmax(0,1fr);column-gap:clamp(28px,3vw,48px)}
   .principal .id{grid-column:1 / -1}
-  .portrait{width:100%;max-width:none;margin:0;align-self:start}
+  .portrait{grid-column:1;grid-row:2 / -1;width:100%;max-width:none;margin:0;align-self:start}
+  .principal .body,.principal .proof{display:contents}
+  .principal .body > *,.proof li{grid-column:2}
+  .principal .promise{margin-top:0}
+  .actions{align-self:end}
   .principal h2{font-size:clamp(40px,3.4vw,60px)}
 }
 @media (max-width:900px){
@@ -199,7 +206,7 @@ footer i{font-family:var(--serif)}
     <p class="promise">A leader in the seat next month, not next year.</p>
     <p class="role">Interim country and general manager, three to nine month mandates across Asia-Pacific.</p>
     <span class="accent" aria-hidden="true"></span>
-    <ul class="proof">
+    <ul class="proof" role="list">
       <li><b>Loss to profit</b><span>Proton Indonesia, a distressed US$38 million subsidiary</span></li>
       <li><b>+28%</b><span>Audi ASEAN regional sales, Malaysia up 150 percent</span></li>
       <li><b>7x EBITDA</b><span>Call Tracking Solutions, built and sold</span></li>
@@ -224,7 +231,7 @@ footer i{font-family:var(--serif)}
     <p class="promise">Evidence designed, run and published.</p>
     <p class="role">Principal investigator and medical advisor to the aesthetics industry.</p>
     <span class="accent" aria-hidden="true"></span>
-    <ul class="proof">
+    <ul class="proof" role="list">
       <li><b>PI</b><span>Two US national Medicare program evaluations</span></li>
       <li><b>10 years</b><span>Steering Committee, Dialysis Outcomes and Practice Patterns Study, 2005 to 2015</span></li>
       <li><b>45+</b><span>Publications and book chapters, nephrology to aesthetic medicine</span></li>
