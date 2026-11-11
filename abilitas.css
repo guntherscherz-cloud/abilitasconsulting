@@ -220,3 +220,13 @@ body{font-size:var(--fs-body)}
 .opening .sub,.hero .lede,.ground .intro,.section .intro,.contact .intro{font-size:var(--fs-lead)}
 .principal .role,.fact p,.caps p,.result p,.situation .proof,.pub .by,.pub .in,.pubs-more,.talk p,.school .where,.cert .what,.job .when,.job .what span,.job .won,.term dd,.practice li,.practice .person,.contact .alt,.contacts .role,.btn,.more,.built h3,.note{font-size:var(--fs-body)}
 .top nav,.proof li,.principal .creds,.eyebrow,.practice .kind,.hero .creds,.markets h2,.markets .held,.markets .more,.maplegend,.subhead,.cert .by,.term dt,.contacts .who,.quote figcaption,.quote figcaption b,.voices .src,.phases-src,.phases .when,footer,.top .name .who{font-size:var(--fs-small)}
+
+/* ===== Alignment: one page width, one two-column grid, header items centered ===== */
+:root{--wide:1240px;--gutter:clamp(56px,7.2vw,104px)}
+.top{align-items:center}
+.top nav{gap:8px 24px}
+@media (min-width:901px){
+  .situation,.ai .head{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--gutter)}
+  .contacts{column-gap:var(--gutter)}
+  .job{grid-template-columns:150px minmax(0,1fr) calc(50% - var(--gutter) / 2)}
+}
