@@ -188,3 +188,13 @@ footer{padding-block:28px 40px;font-size:14px;color:var(--muted)}
   .contact .wrap{padding-block:64px 68px}
 }
 .pubs-tight{margin-top:14px}
+
+/* Logo: keystone mark + Caslon wordmark */
+.top .name{display:inline-flex;align-items:center;gap:12px;font-weight:400;letter-spacing:0}
+.top .name .mark{width:52px;height:34px;flex:none}
+.top .name .mark g{fill:none;stroke:currentColor;stroke-width:5;stroke-linejoin:miter}
+.top .name .mark .key{fill:var(--glow)}
+.top .name .wm{font-family:var(--display);font-size:17px;letter-spacing:.1em;white-space:nowrap}
+.top .name .wm .cap{font-size:1.28em}
+.top .name .who{font-family:var(--text);font-size:16px;letter-spacing:.01em;white-space:nowrap}
+@media (max-width:400px){.top .name{gap:10px}.top .name .mark{width:40px;height:26px}.top .name .wm{font-size:15px}}
