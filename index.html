@@ -11,7 +11,7 @@
 <link rel="canonical" href="https://abilitasconsulting.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital@0;1&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 /* Layout: two signatures. The firm is two principals, so the page opens on the two of them, side by side,
    each with their own promise, proof and direct line. Same tokens as interim.html and medical.html. */
@@ -30,7 +30,7 @@
   --ink-rule:#2C3B45;
   --display:"Libre Caslon Display",Georgia,"Times New Roman",serif;
   --serif:"Libre Caslon Text",Georgia,"Times New Roman",serif;
-  --text:"Hanken Grotesk",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --text:"Libre Caslon Text",Georgia,"Times New Roman",serif;
   --wide:1240px;
   color-scheme:light;
 }
@@ -182,6 +182,28 @@ footer i{font-family:var(--serif)}
 .top .name .wm .cap{font-size:1.28em}
 .top .name .who{font-family:var(--text);font-size:16px;letter-spacing:.01em;white-space:nowrap}
 @media (max-width:400px){.top .name{gap:10px}.top .name .mark{width:40px;height:26px}.top .name .wm{font-size:15px}}
+
+/* ===== Unified typography: one family (Libre Caslon), six sizes ===== */
+:root{
+  --text:"Libre Caslon Text",Georgia,"Times New Roman",serif;
+  --serif:"Libre Caslon Text",Georgia,"Times New Roman",serif;
+  --fs-h1:clamp(38px,4.2vw,58px);
+  --fs-h2:clamp(30px,3vw,42px);
+  --fs-h3:clamp(22px,2vw,26px);
+  --fs-lead:21px;
+  --fs-body:18px;
+  --fs-small:16px;
+}
+@media (max-width:640px){:root{--fs-lead:19px;--fs-body:17px;--fs-small:15px}}
+.top{flex-wrap:wrap;row-gap:12px}
+.top nav a{white-space:nowrap}
+body{font-size:var(--fs-body)}
+.opening h1,.hero h1{font-size:var(--fs-h1)}
+.principal h2,.ground h2,.contact h2,.section > .wrap > h2,.ai h2,.voices h2,.practice h2{font-size:var(--fs-h2)}
+.fact h3,.situation h3,.caps h3,.phases h3,.pub h3,.talk h3,.principal .promise,.names,.markets .place,.school .deg,.quote blockquote,.result .fig,.proof li b,.pub .yr,.talk .yr,.contacts .mail,.contact .mail{font-size:var(--fs-h3)}
+.opening .sub,.hero .lede,.ground .intro,.section .intro,.contact .intro{font-size:var(--fs-lead)}
+.principal .role,.fact p,.caps p,.result p,.situation .proof,.pub .by,.pub .in,.pubs-more,.talk p,.school .where,.cert .what,.job .when,.job .what span,.job .won,.term dd,.practice li,.practice .person,.contact .alt,.contacts .role,.btn,.more,.built h3,.note{font-size:var(--fs-body)}
+.top nav,.proof li,.principal .creds,.eyebrow,.practice .kind,.hero .creds,.markets h2,.markets .held,.markets .more,.maplegend,.subhead,.cert .by,.term dt,.contacts .who,.quote figcaption,.quote figcaption b,.voices .src,.phases-src,.phases .when,footer,.top .name .who{font-size:var(--fs-small)}
 </style>
 </head>
 <body>
