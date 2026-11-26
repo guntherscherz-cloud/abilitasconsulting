@@ -135,18 +135,18 @@ footer i{font-family:var(--serif)}
   @keyframes draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 }
 
-/* Three panels side by side from 1100px. The outer panels carry the page margin so every panel's
-   content sits on the page grid; rows are shared through subgrid so names, promises and proof line up. */
+/* Three panels side by side from 1100px: three equal columns on the page grid, the band's edges
+   aligned with the content edges above and below. Rows are shared through subgrid so names,
+   promises and proof line up across the three. */
 @media (min-width:1100px){
-  .principals{--side:max(0px,(100vw - var(--wide)) / 2);--col:calc((100vw - 2 * var(--side)) / 3);grid-template-columns:calc(var(--side) + var(--col)) minmax(0,1fr) calc(var(--side) + var(--col));grid-template-rows:repeat(8,auto) 1fr}
-  .principal{display:grid;grid-row:1 / -1;grid-template-rows:subgrid;padding:clamp(36px,3.4vw,52px) 28px clamp(40px,4vw,56px)}
-  .principal.lead{padding-left:calc(var(--side) + 28px)}
-  .principal.deliver{padding-right:calc(var(--side) + 28px)}
+  .principals{width:calc(100% - 56px);max-width:calc(var(--wide) - 56px);margin-inline:auto;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(8,auto) 1fr}
+  .principal{display:grid;grid-row:1 / -1;grid-template-rows:subgrid;padding:clamp(36px,3.4vw,52px) clamp(28px,2.6vw,36px) clamp(40px,4vw,56px)}
   .principal .body,.principal .proof{display:contents}
   .principal .id{margin-bottom:24px}
   .portrait{width:62%;max-width:240px;margin:0 0 30px}
   .principal .promise{margin-top:0}
   .actions{align-self:end}
+}
 }
 @media (max-width:900px){
   .opening{grid-template-columns:1fr;gap:16px}
