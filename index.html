@@ -217,7 +217,14 @@ body{font-size:var(--fs-body)}
 .opening h1{font-size:clamp(32px,3.3vw,48px);text-wrap:pretty}
 .opening .sub{font-size:var(--fs-body)}
 /* Three contacts side by side: addresses sized to fit a third of the page */
-@media (min-width:901px){.contacts .mail{font-size:clamp(18px,1.6vw,22px)}}
+@media (min-width:901px){
+  .contacts .mail{font-size:clamp(18px,1.6vw,22px)}
+  /* Practice, name and address share rows across the three columns, so the addresses sit on one line */
+  .contacts{grid-template-rows:repeat(3,auto);row-gap:0}
+  .contacts > div{display:grid;grid-row:span 3;grid-template-rows:subgrid;align-items:start}
+  .contacts .person{margin-top:2px}
+  .contacts .mail{justify-self:start;align-self:start;margin-top:14px}
+}
 </style>
 </head>
 <body>
@@ -360,7 +367,7 @@ body{font-size:var(--fs-body)}
         <a class="mail" href="mailto:gunther@abilitasconsulting.com?subject=Interim%20mandate">gunther@abilitasconsulting.com</a>
       </div>
       <div>
-        <p class="role">Clinical research and medical advisory</p>
+        <p class="role">Clinical research and advisory</p>
         <p class="person">Dr. Sylvia Ramirez, MD, MPH, MBA</p>
         <a class="mail" href="mailto:dr.sylvia@abilitasconsulting.com?subject=Research%20or%20advisory%20enquiry">dr.sylvia@abilitasconsulting.com</a>
       </div>
