@@ -4,17 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Abilitas Consulting</title>
-<meta name="description" content="Abilitas Consulting, Singapore. Interim leadership across Asia-Pacific with Gunther Scherz, MBA, and clinical research and medical advisory for the aesthetics industry with Dr. Sylvia Ramirez, MD, MPH, MBA.">
+<meta name="description" content="Abilitas Consulting. Interim leadership across Asia-Pacific with Gunther Scherz, MBA; clinical research and medical advisory for the aesthetics industry with Dr. Sylvia Ramirez, MD, MPH, MBA; project and program management with Heinz Scherz, Dipl.-Ing., MBA, PMP.">
 <meta property="og:title" content="Abilitas Consulting">
-<meta property="og:description" content="The capacity to lead, and the capacity to prove. Interim leadership and clinical research advisory from Singapore.">
+<meta property="og:description" content="The capacity to lead, to prove and to deliver. Interim leadership, clinical research advisory and project management from Singapore and Germany.">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://abilitasconsulting.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
-/* Layout: two signatures. The firm is two principals, so the page opens on the two of them, side by side,
-   each with their own promise, proof and direct line. Same tokens as interim.html and medical.html. */
+/* Layout: three signatures. The firm is three principals, so the page opens on the three of them, side by side,
+   each with their own promise, proof and direct line. Same tokens as interim.html, medical.html and projects.html. */
 :root{
   --pad:clamp(28px,3.6vw,52px);
   --gutter:calc(var(--pad) * 2);
@@ -24,6 +24,8 @@
   --rule:#D6DBDA;
   --jade:#0D6352;
   --jade-tint:#E1EDE8;
+  --slate:#2F5470;
+  --slate-tint:#E2E9EF;
   --glow:#5CC9A7;
   --on-ink:#F5F6F3;
   --on-ink-muted:#A9B6BC;
@@ -57,47 +59,55 @@ p{margin:0}
 .opening .sub{color:var(--muted);max-width:46ch;padding-bottom:6px}
 
 /* The two principals */
-.principals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
-.principal{display:flex;flex-direction:column;min-width:0;padding:var(--pad)}
-.principal.lead{background:var(--ink);color:var(--on-ink);padding-left:max(28px,calc((100vw - var(--wide)) / 2 + 28px))}
-.principal.prove{background:var(--jade-tint);color:var(--ink);padding-right:max(28px,calc((100vw - var(--wide)) / 2 + 28px))}
+.principals{display:grid;grid-template-columns:minmax(0,1fr)}
+.principal{display:flex;flex-direction:column;min-width:0;padding:var(--pad) 28px}
+.principal.lead{background:var(--ink);color:var(--on-ink)}
+.principal.prove{background:var(--jade-tint);color:var(--ink)}
+.principal.deliver{background:var(--slate-tint);color:var(--ink)}
 .principal .id{margin-bottom:clamp(24px,2.6vw,36px)}
-.principal h2{white-space:nowrap}
 .principal .body{display:flex;flex-direction:column;flex:1;min-width:0}
 .portrait{position:relative;aspect-ratio:4/5;max-width:260px;width:60%;margin:0 0 clamp(26px,3vw,38px);overflow:hidden}
 .lead .portrait{background:#1E2F3A}
 .prove .portrait{background:#C9DDD5}
+.deliver .portrait{background:#C5D2DD}
 .portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05)}
 .portrait .initials{position:absolute;inset:0;display:flex;align-items:flex-end;padding:20px 22px;font-family:var(--display);font-size:clamp(64px,7vw,104px);line-height:.9}
 .lead .portrait .initials{color:#2E4250}
 .prove .portrait .initials{color:#A9C8BC}
+.deliver .portrait .initials{color:#9FB3C4}
 .principal h2{font-family:var(--display);font-size:clamp(40px,4.6vw,68px);line-height:.98;letter-spacing:-.015em}
 .principal .creds{margin-top:10px;font-size:16px}
 .lead .creds{color:var(--on-ink-muted)}
-.prove .creds{color:var(--muted)}
+.prove .creds,.deliver .creds{color:var(--muted)}
 .principal .promise{margin-top:22px;font-family:var(--serif);font-style:italic;font-size:clamp(22px,2.2vw,29px);line-height:1.3;max-width:22ch}
 .principal .role{margin-top:12px;font-size:16px;max-width:40ch}
 .lead .role{color:var(--on-ink-muted)}
-.prove .role{color:var(--muted)}
+.prove .role,.deliver .role{color:var(--muted)}
 .accent{display:block;height:3px;margin-top:30px;transform-origin:left center}
 .lead .accent{background:var(--glow)}
 .prove .accent{background:var(--jade)}
+.deliver .accent{background:var(--slate)}
 .proof{list-style:none;margin:0;padding:0;display:grid;max-width:48ch}
 .proof li{display:grid;grid-template-columns:7.5em minmax(0,1fr);gap:16px;align-items:baseline;padding-block:13px;font-size:16px;line-height:1.45}
 .lead .proof li{border-bottom:1px solid var(--ink-rule);color:var(--on-ink-muted)}
 .prove .proof li{border-bottom:1px solid #BFD6CE;color:#2E4048}
+.deliver .proof li{border-bottom:1px solid #C5D2DD;color:#2E4048}
 .proof b{font-family:var(--display);font-weight:400;font-size:24px;line-height:1.1;white-space:nowrap}
 .lead .proof b{color:#FFFFFF}
 .prove .proof b{color:var(--jade)}
+.deliver .proof b{color:var(--slate)}
 .actions{margin-top:auto;padding-top:32px;display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center}
 .btn{display:inline-block;font-weight:600;font-size:17px;padding:13px 22px;border-radius:3px;text-decoration:none}
 .lead .btn{background:var(--glow);color:var(--ink)}
 .lead .btn:hover{background:#FFFFFF}
 .prove .btn{background:var(--jade);color:#FFFFFF}
 .prove .btn:hover{background:var(--ink)}
+.deliver .btn{background:var(--slate);color:#FFFFFF}
+.deliver .btn:hover{background:var(--ink)}
 .more{font-weight:600;font-size:17px;text-decoration:none;border-bottom:1.5px solid currentColor;padding-bottom:2px}
 .lead .more{color:var(--on-ink)}
 .prove .more{color:var(--jade)}
+.deliver .more{color:var(--slate)}
 .lead a:focus-visible{outline-color:var(--glow)}
 
 /* Shared ground */
@@ -117,13 +127,14 @@ p{margin:0}
 .names{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px 34px;font-family:var(--display);font-size:clamp(24px,2.6vw,34px);line-height:1.3}
 .names li{white-space:nowrap}
 .names .s{color:var(--jade)}
+.names .h{color:var(--slate)}
 
 /* Contact */
 .contact{margin-top:clamp(80px,10vw,128px);background:var(--ink);color:var(--on-ink)}
 .contact .wrap{padding-block:clamp(64px,8vw,96px)}
 .contact h2{font-family:var(--display);font-size:clamp(36px,4.6vw,60px);line-height:1.05;max-width:18ch}
 .contact .intro{color:var(--on-ink-muted);margin-top:18px;max-width:54ch}
-.contacts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--gutter);row-gap:28px;margin-top:44px;border-top:1px solid var(--ink-rule);padding-top:32px}
+.contacts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:var(--gutter);row-gap:28px;margin-top:44px;border-top:1px solid var(--ink-rule);padding-top:32px}
 .contacts .role{font-family:var(--serif);font-style:italic;color:var(--on-ink-muted);font-size:17px}
 .contacts .person{font-weight:600;margin-top:2px}
 .contacts .mail{display:inline-block;margin-top:12px;font-family:var(--display);font-size:clamp(22px,2.4vw,30px);color:var(--on-ink);text-decoration:none;border-bottom:1.5px solid rgba(245,246,243,.4);padding-bottom:3px;overflow-wrap:anywhere}
@@ -138,24 +149,27 @@ footer i{font-family:var(--serif)}
 @media (prefers-reduced-motion:no-preference){
   .accent{animation:draw 1.1s cubic-bezier(.3,.6,.2,1) .25s both}
   .prove .accent{animation-delay:.4s}
+  .deliver .accent{animation-delay:.55s}
   @keyframes draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 }
 
+/* Three panels side by side from 1100px. The outer panels carry the page margin so every panel's
+   content sits on the page grid; rows are shared through subgrid so names, promises and proof line up. */
 @media (min-width:1100px){
-  .principals{grid-template-rows:repeat(7,auto) 1fr}
-  .principal{display:grid;grid-row:1 / -1;grid-template-rows:subgrid;grid-template-columns:minmax(0,.72fr) minmax(0,1fr);column-gap:clamp(28px,3vw,48px)}
-  .principal .id{grid-column:1 / -1}
-  .portrait{grid-column:1;grid-row:2 / -1;width:100%;max-width:none;margin:0;align-self:start}
+  .principals{--side:max(0px,(100vw - var(--wide)) / 2);--col:calc((100vw - 2 * var(--side)) / 3);grid-template-columns:calc(var(--side) + var(--col)) minmax(0,1fr) calc(var(--side) + var(--col));grid-template-rows:repeat(8,auto) 1fr}
+  .principal{display:grid;grid-row:1 / -1;grid-template-rows:subgrid;padding:clamp(36px,3.4vw,52px) 28px clamp(40px,4vw,56px)}
+  .principal.lead{padding-left:calc(var(--side) + 28px)}
+  .principal.deliver{padding-right:calc(var(--side) + 28px)}
   .principal .body,.principal .proof{display:contents}
-  .principal .body > *,.proof li{grid-column:2}
+  .principal .id{margin-bottom:24px}
+  .portrait{width:62%;max-width:240px;margin:0 0 30px}
   .principal .promise{margin-top:0}
   .actions{align-self:end}
-  .principal h2{font-size:clamp(40px,3.4vw,60px)}
 }
 @media (max-width:900px){
   .opening{grid-template-columns:1fr;gap:16px}
   .principals{grid-template-columns:1fr}
-  .principal.lead,.principal.prove{padding-left:max(28px,env(safe-area-inset-left,0px));padding-right:max(28px,env(safe-area-inset-right,0px))}
+  .principal.lead,.principal.prove,.principal.deliver{padding-left:max(28px,env(safe-area-inset-left,0px));padding-right:max(28px,env(safe-area-inset-right,0px))}
   .portrait{width:46%}
   .ground-head{grid-template-columns:1fr;gap:18px}
   .facts{grid-template-columns:1fr}
@@ -167,7 +181,7 @@ footer i{font-family:var(--serif)}
   .wrap{padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
   .top{flex-direction:column;gap:10px}
   .top nav{gap:6px 18px}
-  .principal.lead,.principal.prove{padding:28px 20px 36px}
+  .principal.lead,.principal.prove,.principal.deliver{padding:28px 20px 36px}
   .portrait{width:70%}
   .proof li{grid-template-columns:6.5em minmax(0,1fr)}
   .proof b{font-size:21px}
@@ -205,13 +219,7 @@ body{font-size:var(--fs-body)}
 .principal .role,.fact p,.caps p,.result p,.situation .proof,.pub .by,.pub .in,.pubs-more,.talk p,.school .where,.cert .what,.job .when,.job .what span,.job .won,.term dd,.practice li,.practice .person,.contact .alt,.contacts .role,.btn,.more,.built h3,.note{font-size:var(--fs-body)}
 .top nav,.proof li,.principal .creds,.eyebrow,.practice .kind,.hero .creds,.markets h2,.markets .held,.markets .more,.maplegend,.subhead,.cert .by,.term dt,.contacts .who,.quote figcaption,.quote figcaption b,.voices .src,.phases-src,.phases .when,footer,.top .name .who{font-size:var(--fs-small)}
 
-/* ===== Alignment: principal panels sit on the same two-column grid as the rest of the page ===== */
-@media (min-width:901px){
-  .principal.lead{padding-right:calc(var(--gutter) / 2)}
-  .principal.prove{padding-left:calc(var(--gutter) / 2)}
-  .portrait{grid-row:2 / 8}
-  .principal .body > .actions{grid-column:1 / -1}
-}
+/* ===== Proof lines stack figure over text ===== */
 .proof li{grid-template-columns:minmax(0,1fr);gap:4px;align-items:start;align-content:start}
 
 /* ===== Alignment: one page width, one two-column grid, header items centered ===== */
@@ -223,6 +231,8 @@ body{font-size:var(--fs-body)}
   .contacts{column-gap:var(--gutter)}
   .job{grid-template-columns:150px minmax(0,1fr) calc(50% - var(--gutter) / 2)}
 }
+/* Three contacts side by side: addresses sized to fit a third of the page */
+@media (min-width:901px){.contacts .mail{font-size:clamp(18px,1.6vw,22px)}}
 </style>
 </head>
 <body>
@@ -233,17 +243,18 @@ body{font-size:var(--fs-body)}
     <nav aria-label="Primary">
       <a href="interim.html">Interim leadership</a>
       <a href="medical.html">Clinical research and advisory</a>
+      <a href="projects.html">Project management</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <section class="opening">
-    <h1>Interim leadership across Asia-Pacific, and clinical research for the aesthetics industry.</h1>
-    <p class="sub">Two independent practices from Singapore, each delivered in person by its principal. No junior teams, no hand-offs: the person you meet is the person who does the work.</p>
+    <h1>Interim leadership across Asia-Pacific, clinical research for aesthetics, and project management for global programs.</h1>
+    <p class="sub">Three independent practices from Singapore and Germany, each delivered in person by its principal. No junior teams, no hand-offs: the person you meet is the person who does the work.</p>
   </section>
 </div>
 
-<section class="principals" aria-label="The two principals">
+<section class="principals" aria-label="The three principals">
   <article class="principal lead">
     <header class="id">
       <h2>Gunther Scherz</h2>
@@ -293,18 +304,43 @@ body{font-size:var(--fs-body)}
     </div>
     </div>
   </article>
+
+  <article class="principal deliver">
+    <header class="id">
+      <h2>Heinz Scherz</h2>
+      <p class="creds">Dipl.-Ing., MBA, PMP</p>
+    </header>
+    <div class="portrait">
+      <span class="initials" aria-hidden="true">HS</span>
+      <img src="images/heinz-scherz.jpg" alt="Heinz Scherz" width="800" height="1000" onerror="this.remove()">
+    </div>
+    <div class="body">
+    <p class="promise">Global programs planned, run and adopted.</p>
+    <p class="role">Interim project and program manager for process, quality and SAP programs in regulated industries.</p>
+    <span class="accent" aria-hidden="true"></span>
+    <ul class="proof" role="list">
+      <li><b>60 countries</b><span>Quality process rollout to 90+ sites and about 700 users, Boehringer Ingelheim</span></li>
+      <li><b>Group-wide</b><span>Project lead, change control standardization across all Boehringer Ingelheim business areas</span></li>
+      <li><b>17 countries</b><span>Carlsberg standardization program; led the SAP production, maintenance and quality implementation for EMEA</span></li>
+    </ul>
+    <div class="actions">
+      <a class="btn" href="mailto:heinz@abilitasconsulting.com?subject=Project%20enquiry">Email Heinz</a>
+      <a class="more" href="projects.html">Project management</a>
+    </div>
+    </div>
+  </article>
 </section>
 
 <section class="ground" aria-labelledby="ground-h">
   <div class="wrap">
     <div class="ground-head">
-    <h2 id="ground-h">Two independent practices, one working relationship since 2007</h2>
-    <p class="intro">The principals co-founded <a href="https://www.cutislaserclinics.com" rel="noopener">Cutis Medical Laser Clinics</a> in Singapore in 2007 and lead it today: Dr. Sylvia Ramirez as Medical and Scientific Director, Gunther Scherz as Managing Director. Running a medical aesthetics practice together for nearly two decades is where the two disciplines met: clinical evidence and medical governance on one side, P&amp;L, operations and growth on the other. They have published together since 2021. Each practice is contracted through Abilitas Consulting and delivered by its principal in person.</p>
+    <h2 id="ground-h">Three independent practices, one way of working</h2>
+    <p class="intro">Gunther Scherz and Dr. Sylvia Ramirez co-founded <a href="https://www.cutislaserclinics.com" rel="noopener">Cutis Medical Laser Clinics</a> in Singapore in 2007 and lead it today: Dr. Sylvia Ramirez as Medical and Scientific Director, Gunther Scherz as Managing Director. Running a medical aesthetics practice together for nearly two decades is where clinical evidence and medical governance met P&amp;L, operations and growth, and they have published together since 2021. Heinz Scherz, Gunther's brother, adds the third discipline from Germany: three decades of project and program management, most recently leading global quality process programs in pharmaceuticals. Each practice is contracted through Abilitas Consulting and delivered by its principal in person.</p>
     </div>
     <div class="facts">
       <div class="fact"><h3>No leverage model</h3><p>No junior teams and no hand-offs. The principal you meet is the person who does the work.</p></div>
-      <div class="fact"><h3>Based in Singapore</h3><p>Both principals are based in Singapore, where no work permit is required, and both work on site across Asia-Pacific.</p></div>
-      <div class="fact"><h3>A shared research record</h3><p>Seven peer-reviewed papers and book chapters co-authored since 2021, on aesthetic medicine, patient decision-making and ethics.</p></div>
+      <div class="fact"><h3>Singapore and Germany</h3><p>Gunther and Sylvia are based in Singapore, where no work permit is required, and work on site across Asia-Pacific. Heinz is based in Germany and works on site across Europe and on global rollouts.</p></div>
+      <div class="fact"><h3>A shared research record</h3><p>Seven peer-reviewed papers and book chapters co-authored by Sylvia and Gunther since 2021, on aesthetic medicine, patient decision-making and ethics.</p></div>
     </div>
 
     <div class="built">
@@ -319,6 +355,10 @@ body{font-size:var(--fs-body)}
         <li class="s">Arbor Research</li>
         <li class="s">DaVita Asia Pacific</li>
         <li class="s">National Kidney Foundation Singapore</li>
+        <li class="h">Boehringer Ingelheim</li>
+        <li class="h">Bayer</li>
+        <li class="h">Carlsberg</li>
+        <li class="h">SAP</li>
       </ul>
     </div>
   </div>
@@ -338,6 +378,11 @@ body{font-size:var(--fs-body)}
         <p class="role">Clinical research and medical advisory</p>
         <p class="person">Dr. Sylvia Ramirez, MD, MPH, MBA</p>
         <a class="mail" href="mailto:dr.sylvia@abilitasconsulting.com?subject=Research%20or%20advisory%20enquiry">dr.sylvia@abilitasconsulting.com</a>
+      </div>
+      <div>
+        <p class="role">Project and program management</p>
+        <p class="person">Heinz Scherz, Dipl.-Ing., MBA, PMP</p>
+        <a class="mail" href="mailto:heinz@abilitasconsulting.com?subject=Project%20enquiry">heinz@abilitasconsulting.com</a>
       </div>
     </div>
   </div>
