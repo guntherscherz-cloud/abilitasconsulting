@@ -55,9 +55,9 @@ p{margin:0}
 
 /* Opening line: modest on purpose; the principals are the headline */
 .opening{padding-block:clamp(20px,4vw,48px) clamp(28px,4vw,44px);border-top:1px solid var(--rule)}
-.opening{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--gutter);align-items:end}
-.opening h1{font-family:var(--display);font-size:clamp(34px,3.6vw,54px);line-height:1.08;letter-spacing:-.01em;max-width:26ch}
-.opening .sub{color:var(--muted);max-width:46ch;padding-bottom:6px}
+.opening{display:grid;grid-template-columns:minmax(0,1fr);row-gap:clamp(16px,1.8vw,24px)}
+.opening h1{font-family:var(--display);font-size:clamp(34px,3.6vw,54px);line-height:1.1;letter-spacing:-.01em;max-width:none}
+.opening .sub{color:var(--muted);max-width:62ch}
 
 /* The two principals */
 .principals{display:grid;grid-template-columns:minmax(0,1fr)}
@@ -197,7 +197,7 @@ body{font-size:var(--fs-body)}
 .opening h1,.hero h1{font-size:var(--fs-h1)}
 .principal h2,.ground h2,.contact h2,.section > .wrap > h2,.ai h2,.voices h2,.practice h2{font-size:var(--fs-h2)}
 .fact h3,.situation h3,.caps h3,.phases h3,.pub h3,.talk h3,.principal .promise,.names,.markets .place,.school .deg,.quote blockquote,.result .fig,.proof li b,.pub .yr,.talk .yr,.contacts .mail,.contact .mail{font-size:var(--fs-h3)}
-.opening .sub,.hero .lede,.ground .intro,.section .intro,.contact .intro{font-size:var(--fs-lead)}
+.hero .lede,.ground .intro,.section .intro,.contact .intro{font-size:var(--fs-lead)}
 .principal .role,.fact p,.caps p,.result p,.situation .proof,.pub .by,.pub .in,.pubs-more,.talk p,.school .where,.cert .what,.job .when,.job .what span,.job .won,.term dd,.practice li,.practice .person,.contact .alt,.contacts .role,.btn,.more,.built h3,.note{font-size:var(--fs-body)}
 .top nav,.proof li,.principal .creds,.eyebrow,.practice .kind,.hero .creds,.markets h2,.markets .held,.markets .more,.maplegend,.subhead,.cert .by,.term dt,.contacts .who,.quote figcaption,.quote figcaption b,.voices .src,.phases-src,.phases .when,footer,.top .name .who{font-size:var(--fs-small)}
 
@@ -213,6 +213,9 @@ body{font-size:var(--fs-body)}
   .contacts{column-gap:var(--gutter)}
   .job{grid-template-columns:150px minmax(0,1fr) calc(50% - var(--gutter) / 2)}
 }
+/* Opening: headline runs the full page width in two lines, the practice line sits below it in body size */
+.opening h1{font-size:clamp(32px,3.3vw,48px);text-wrap:pretty}
+.opening .sub{font-size:var(--fs-body)}
 /* Three contacts side by side: addresses sized to fit a third of the page */
 @media (min-width:901px){.contacts .mail{font-size:clamp(18px,1.6vw,22px)}}
 </style>
