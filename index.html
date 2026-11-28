@@ -96,9 +96,10 @@ p{margin:0}
 
 /* Shared ground */
 .ground{padding-block:clamp(72px,9vw,120px) 0}
-.ground h2{font-family:var(--display);font-size:clamp(34px,4vw,52px);line-height:1.06;letter-spacing:-.01em;max-width:20ch}
-.ground-head{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--gutter);align-items:start}
-.ground .intro{color:var(--muted);max-width:60ch;padding-top:8px}
+.ground h2{font-family:var(--display);font-size:clamp(34px,4vw,52px);line-height:1.06;letter-spacing:-.01em;max-width:none}
+.ground-head{display:grid;grid-template-columns:minmax(0,1fr);row-gap:clamp(16px,1.8vw,24px)}
+.ground .intro{color:var(--muted);max-width:none}
+.ground .intro + .intro{margin-top:-4px}
 .facts{margin-top:48px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:2px solid var(--ink)}
 .fact{padding:28px 28px 30px 0;min-width:0}
 .fact + .fact{padding-left:28px;border-left:1px solid var(--rule)}
@@ -327,7 +328,8 @@ body{font-size:var(--fs-body)}
   <div class="wrap">
     <div class="ground-head">
     <h2 id="ground-h">Three independent practices, one way of working</h2>
-    <p class="intro">Gunther Scherz and Dr. Sylvia Ramirez co-founded <a href="https://www.cutislaserclinics.com" rel="noopener">Cutis Medical Laser Clinics</a> in Singapore in 2007 and lead it today: Dr. Sylvia Ramirez as Medical and Scientific Director, Gunther Scherz as Managing Director. Running a medical aesthetics practice together for nearly two decades is where clinical evidence and medical governance met P&amp;L, operations and growth, and they have published together since 2021. Heinz Scherz, Gunther's brother and the firm's Associate Partner for Europe, adds the third discipline from Germany: three decades of project and program management, most recently leading global quality programs in pharmaceuticals, and long experience as a systemic coach for leaders and teams. Each practice is contracted through Abilitas Consulting and delivered by its principal in person.</p>
+    <p class="intro">Gunther Scherz and Dr. Sylvia Ramirez co-founded <a href="https://www.cutislaserclinics.com" rel="noopener">Cutis Medical Laser Clinics</a> in Singapore in 2007 and lead it today: Dr. Sylvia Ramirez as Medical and Scientific Director, Gunther Scherz as Managing Director. Running a medical aesthetics practice together for nearly two decades is where clinical evidence and medical governance met P&amp;L, operations and growth, and they have published together since 2021.</p>
+    <p class="intro">Heinz Scherz, Gunther's brother and the firm's Associate Partner for Europe, adds the third discipline from Germany: three decades of project and program management, most recently leading global quality programs in pharmaceuticals, and long experience as a systemic coach for leaders and teams. Each practice is contracted through Abilitas Consulting and delivered by its principal in person.</p>
     </div>
     <div class="facts">
       <div class="fact"><h3>No leverage model</h3><p>No junior teams and no hand-offs. The principal you meet is the person who does the work.</p></div>
